@@ -3,5 +3,5 @@ output "resource_group_name" {
 }
 
 output "storage_containers" {
-  value = module.dynamic.storage_container_id
+  value = module.dynamic_example.storage_container_id
 }

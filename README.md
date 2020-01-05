@@ -42,10 +42,10 @@ The tests show how the `resource_group_name` and `storage_containers` outputs ca
 resource_group_name = rg_test_demo01-
 storage_containers = [
   [
-    "https://taoqhuwrxj7b000.blob.core.windows.net/earth",
-    "https://taoqhuwrxj7b002.blob.core.windows.net/jupiter",
-    "https://taoqhuwrxj7b001.blob.core.windows.net/mars",
-    "https://taoqhuwrxj7b000.blob.core.windows.net/venus",
+    "https://taoqhuwrxj7b000.blob.core.windows.net/earth-000",
+    "https://taoqhuwrxj7b002.blob.core.windows.net/jupiter-002",
+    "https://taoqhuwrxj7b001.blob.core.windows.net/mars-001",
+    "https://taoqhuwrxj7b000.blob.core.windows.net/venus-000",
   ],
 ]
 ```

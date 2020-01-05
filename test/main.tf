@@ -13,9 +13,9 @@ resource "azurerm_resource_group" "dynamic" {
   location = var.location
 }
 
-module "dynamic" {
-  source              = "../"
-  resource_group_name = azurerm_resource_group.dynamic.name
-  storage_mapping     = var.storage_mapping
-  unique_id           = lower(random_string.unique_id.result)
+module "dynamic_example" {
+  source                    = "../"
+  resource_group_name       = azurerm_resource_group.dynamic.name
+  storage_container_mapping = var.storage_container_mapping
+  unique_id                 = lower(random_string.unique_id.result)
 }
