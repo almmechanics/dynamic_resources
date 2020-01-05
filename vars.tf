@@ -4,7 +4,7 @@ variable "resource_group_name" {
 }
 
 variable "storage_mapping" {
-  type = list
+  type = map
 }
 variable "unique_id" {
   type = string

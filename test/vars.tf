@@ -4,5 +4,5 @@ variable "location" {
 }
 
 variable "storage_mapping" {
-  type = list
+  type = map
 }

@@ -1,6 +1,7 @@
-storage_mapping = [
-  { sa = "0", name = "earth" },
-  { sa = "0", name = "venus" },
-  { sa = "1", name = "mars" },
-  { sa = "2", name = "jupiter" }
-]
+storage_mapping = {
+  "earth" = "0"
+  "venus" = "0"
+  "mars" = "1"
+  "jupiter" ="2"
+  "pluto" = "2"
+}

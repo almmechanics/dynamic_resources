@@ -10,15 +10,21 @@ resource "azurerm_storage_account" "dynamic" {
   account_replication_type = "GRS"
   account_kind             = "StorageV2"
 
-  count = length(distinct(var.storage_mapping[*].sa))
-  name  = format("sa%s%03d", var.unique_id, count.index)
+
+  for_each = toset(distinct(values(var.storage_mapping)))
+  name  = format("sa%s%03d", var.unique_id, each.key) 
 }
 
 resource "azurerm_storage_container" "dynamic" {
 
-  container_access_type = "private"
-  count                 = length(var.storage_mapping[*].sa)
+  depends_on = [
+    azurerm_storage_account.dynamic,
+  ]
 
-  storage_account_name = format("sa%s%03d", var.unique_id, var.storage_mapping[count.index].sa)
-  name                 = format("cont%s-%s", var.unique_id, lower(var.storage_mapping[count.index].name))
+  container_access_type = "private"
+
+  for_each = var.storage_mapping
+
+  storage_account_name = format("sa%s%03d", var.unique_id, each.value)
+  name                 = format(lower(each.key))
 }
