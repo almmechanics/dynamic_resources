@@ -10,8 +10,9 @@ resource "azurerm_storage_account" "dynamic" {
   account_replication_type = "GRS"
   account_kind             = "StorageV2"
 
-  for_each = toset(distinct(values(var.storage_container_mapping)))
-  name     = format("sa%s%03d", var.unique_id, each.key)
+  for_each                  = toset(distinct(values(var.storage_container_mapping)))
+  name                      = format("sa%s%03d", var.unique_id, each.key)
+  enable_https_traffic_only = true
 }
 
 resource "azurerm_storage_container" "dynamic" {
