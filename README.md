@@ -45,7 +45,6 @@ storage_containers = [
     "https://taoqhuwrxj7b000.blob.core.windows.net/earth",
     "https://taoqhuwrxj7b002.blob.core.windows.net/jupiter",
     "https://taoqhuwrxj7b001.blob.core.windows.net/mars",
-    "https://taoqhuwrxj7b002.blob.core.windows.net/pluto",
     "https://taoqhuwrxj7b000.blob.core.windows.net/venus",
   ],
 ]

@@ -3,5 +3,4 @@ storage_mapping = {
   "venus" = "0"
   "mars" = "1"
   "jupiter" ="2"
-  "pluto" = "2"
 }
