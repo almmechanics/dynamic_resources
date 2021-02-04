@@ -5,7 +5,7 @@ variable "resource_group_name" {
 
 variable "storage_container_mapping" {
   description = "Mapping of Storage containers to Storage accounts"
-  type        = map
+  type        = map(any)
 }
 
 variable "unique_id" {

@@ -1,3 +1,20 @@
+terraform {
+  required_providers {
+    local = {
+      version = "~> 2.0.0"
+    }
+
+    azurerm = {
+      version = "=2.46.0"
+    }
+  }
+}
+
+provider "azurerm" {
+  skip_provider_registration = true
+  features { }
+}
+
 resource "random_string" "dynamic" {
   length           = 8
   override_special = "-_"
